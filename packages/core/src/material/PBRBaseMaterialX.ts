@@ -214,7 +214,7 @@ export class PBRBaseMaterialX extends Material {
 
   /**
    * Clear coat texture strengh.
-   */ 
+   */
   get clearCoatTextureStrengh(): number {
     return null;
   }
@@ -222,10 +222,26 @@ export class PBRBaseMaterialX extends Material {
   set clearCoatTextureStrengh(value: number) {}
 
   /**
-   * Clear coat Roughness.
+   * Clear coat roughness.
    */
   get clearCoatRoughness(): number {
     return 0;
   }
   set clearCoatRoughness(value: number) {}
+
+  /**
+   * Clear coat roughness Texture.
+   */
+  get clearCoatRoughnessTexture(): Texture2D {
+    return null;
+  }
+  set clearCoatRoughnessTexture(value: Texture2D) {}
+
+  /**
+   * Clear coat normal Texture.
+   */
+  get clearCoatNormalTexture(): Texture2D {
+    return null;
+  }
+  set clearCoatNormalTexture(value: Texture2D) {}
 }
