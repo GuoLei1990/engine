@@ -7,7 +7,7 @@ import { PBRBaseMaterialX } from "./PBRBaseMaterialX";
 export class PBRMaterialX extends PBRBaseMaterialX {
   private _metallic: number = 0.0;
   private _roughness: number = 0.5;
-  private _metallicRoughnessTexture: Texture2D;
+  private _roughnessMetallicTexture: Texture2D;
 
   /**
    * Metallic.
@@ -34,15 +34,15 @@ export class PBRMaterialX extends PBRBaseMaterialX {
   }
 
   /**
-   * Metallic roughness texture.
-   * @remarks G is metallic, B is roughness
+   * Roughness metallic texture.
+   * @remarks G channel is roughness, B channel is metallic
    */
-  get metallicRoughnessTexture(): Texture2D {
-    return this._metallicRoughnessTexture;
+  get roughnessMetallicTexture(): Texture2D {
+    return this._roughnessMetallicTexture;
   }
 
-  set metallicRoughnessTexture(v: Texture2D) {
-    this._metallicRoughnessTexture = v;
+  set roughnessMetallicTexture(v: Texture2D) {
+    this._roughnessMetallicTexture = v;
 
     if (v) {
       this.shaderData.enableMacro("HAS_METALROUGHNESSMAP");
