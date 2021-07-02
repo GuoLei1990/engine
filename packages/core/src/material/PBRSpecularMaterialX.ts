@@ -11,17 +11,6 @@ export class PBRSpecularMaterialX extends PBRBaseMaterialX {
   private _glossiness: number;
 
   /**
-   * Glossiness.
-   */
-  get glossiness(): number {
-    return this._glossiness;
-  }
-
-  set glossiness(value: number) {
-    this._glossiness = value;
-  }
-
-  /**
    * Specular color.
    */
   get specularColor(): Color {
@@ -33,7 +22,19 @@ export class PBRSpecularMaterialX extends PBRBaseMaterialX {
   }
 
   /**
+   * Glossiness.
+   */
+  get glossiness(): number {
+    return this._glossiness;
+  }
+
+  set glossiness(value: number) {
+    this._glossiness = value;
+  }
+
+  /**
    * Specular glossiness texture.
+   * @remarks RGB is specular, A is glossiness
    */
   get specularGlossinessTexture(): Texture2D {
     return this._specularGlossinessTexture;

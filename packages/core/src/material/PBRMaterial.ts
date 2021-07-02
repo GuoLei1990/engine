@@ -73,13 +73,13 @@ export class PBRMaterial extends PBRBaseMaterial {
   }
 
   /**
-   * Metallic rough texture.
+   * Roughness metallic texture.
    */
-  get metallicRoughnessTexture(): Texture2D {
+  get roughnessMetallicTexture(): Texture2D {
     return this._metallicRoughnessTexture;
   }
 
-  set metallicRoughnessTexture(v: Texture2D) {
+  set roughnessMetallicTexture(v: Texture2D) {
     this._metallicRoughnessTexture = v;
 
     if (v) {

@@ -35,6 +35,7 @@ export class PBRMaterialX extends PBRBaseMaterialX {
 
   /**
    * Metallic roughness texture.
+   * @remarks G is metallic, B is roughness
    */
   get metallicRoughnessTexture(): Texture2D {
     return this._metallicRoughnessTexture;
