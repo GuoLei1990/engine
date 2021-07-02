@@ -13,7 +13,7 @@ export class PBRBaseMaterialX extends Material {
   private _emissiveTexture: Texture2D;
   private _tilingOffset: Vector4 = new Vector4(1, 1, 0, 0);
   private _occlusionTexture: Texture2D;
-  private _occlusionStrength: number = 0.0;
+  private _occlusionIntensity: number = 0.0;
   private _detailTilingOffset: Vector4 = new Vector4(1, 1, 0, 0);
 
   /**
@@ -66,13 +66,13 @@ export class PBRBaseMaterialX extends Material {
   }
 
   /**
-   * Normal texture strengh.
+   * Normal texture intensity.
    */
-  get normalTextureStrengh(): number {
+  get normalTextureIntensity(): number {
     return null;
   }
 
-  set normalTextureStrengh(value: number) {}
+  set normalTextureIntensity(value: number) {}
 
   /**
    * Emissive color.
@@ -124,14 +124,14 @@ export class PBRBaseMaterialX extends Material {
   }
 
   /**
-   * Occlusion strength.
+   * Occlusion texture intensity.
    */
-  get occlusionStrength(): number {
-    return this._occlusionStrength;
+  get occlusionTextureIntensity(): number {
+    return this._occlusionIntensity;
   }
 
-  set occlusionStrength(v: number) {
-    this._occlusionStrength = v;
+  set occlusionTextureIntensity(v: number) {
+    this._occlusionIntensity = v;
     this.shaderData.setFloat("u_occlusionStrength", v);
   }
 
@@ -145,13 +145,13 @@ export class PBRBaseMaterialX extends Material {
   set parallaxTexture(value: Texture2D) {}
 
   /**
-   * Parallax texture strength.
+   * Parallax texture intensity.
    */
-  get parallaxTextureStrength(): number {
+  get parallaxTextureIntensity(): number {
     return null;
   }
 
-  set parallaxTextureStrength(value: number) {}
+  set parallaxTextureIntensity(value: number) {}
 
   /**
    * Tiling and offset of main textures.
@@ -213,13 +213,13 @@ export class PBRBaseMaterialX extends Material {
   set clearCoatTexture(value: Texture2D) {}
 
   /**
-   * Clear coat texture strengh.
+   * Clear coat texture intensity.
    */
-  get clearCoatTextureStrengh(): number {
+  get clearCoatTextureIntensity(): number {
     return null;
   }
 
-  set clearCoatTextureStrengh(value: number) {}
+  set clearCoatTextureIntensity(value: number) {}
 
   /**
    * Clear coat roughness.
@@ -230,7 +230,7 @@ export class PBRBaseMaterialX extends Material {
   set clearCoatRoughness(value: number) {}
 
   /**
-   * Clear coat roughness Texture.
+   * Clear coat roughness texture.
    */
   get clearCoatRoughnessTexture(): Texture2D {
     return null;
@@ -238,10 +238,18 @@ export class PBRBaseMaterialX extends Material {
   set clearCoatRoughnessTexture(value: Texture2D) {}
 
   /**
-   * Clear coat normal Texture.
+   * Clear coat normal texture.
    */
   get clearCoatNormalTexture(): Texture2D {
     return null;
   }
   set clearCoatNormalTexture(value: Texture2D) {}
+
+  /**
+   * Clear coat normal texture intensity.
+   */
+  get clearCoatNormalTextureIntensity(): Texture2D {
+    return null;
+  }
+  set clearCoatNormalTextureIntensity(value: Texture2D) {}
 }
