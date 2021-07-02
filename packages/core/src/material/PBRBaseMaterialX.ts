@@ -1,11 +1,11 @@
 import { Color, Vector4 } from "@oasis-engine/math";
 import { Texture2D } from "../texture/Texture2D";
-import { Material } from "./Material";
+import { BaseMaterial } from "./BaseMaterial";
 
 /**
- * PBRBaseMaterial.
+ * PBR base material.
  */
-export class PBRBaseMaterialX extends Material {
+export abstract class PBRBaseMaterialX extends BaseMaterial {
   private _baseColor: Color = new Color(1, 1, 1, 1);
   private _baseTexture: Texture2D;
   private _normalTexture: Texture2D;

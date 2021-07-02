@@ -1,6 +1,9 @@
 import { Texture2D } from "../texture/Texture2D";
 import { PBRBaseMaterialX } from "./PBRBaseMaterialX";
 
+/**
+ * PBR metallic-roughness workflow material.
+ */
 export class PBRMaterialX extends PBRBaseMaterialX {
   private _metallic: number = 0.0;
   private _roughness: number = 0.5;
