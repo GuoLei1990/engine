@@ -167,6 +167,7 @@ export abstract class PBRBaseMaterialX extends BaseMaterial {
 
   /**
    * Detail mask.
+   * @remarks  R channel is mask.
    */
   get detailMask(): Texture2D {
     return null;
@@ -231,6 +232,7 @@ export abstract class PBRBaseMaterialX extends BaseMaterial {
 
   /**
    * Clear coat roughness texture.
+   * @remarks G channel is roughness.
    */
   get clearCoatRoughnessTexture(): Texture2D {
     return null;

@@ -34,7 +34,7 @@ export class PBRSpecularMaterialX extends PBRBaseMaterialX {
 
   /**
    * Specular glossiness texture.
-   * @remarks RGB is specular, A is glossiness
+   * @remarks RGB is specular, A is glossiness.
    */
   get specularGlossinessTexture(): Texture2D {
     return this._specularGlossinessTexture;
